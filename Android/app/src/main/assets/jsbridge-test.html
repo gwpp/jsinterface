@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSBridge Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.12.4/jquery.js"></script>
+
+    <style type="text/css">
+        .btn {
+            background-color: #aaa;
+            height: 40px;
+            margin: 10px;
+        }
+
+        #response {
+            background: #eeeeee;
+            word-wrap: break-word;
+            display: block;
+            outline: 1px solid #ccc;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<button class="btn" id="getOS">获取当前操作系统</button>
+<button class="btn" id="login">发起登录</button>
+
+<pre id="response"></pre>
+
+<script type="text/javascript">
+    /**
+     * 初始化jsbridge
+     * @param readyCallback 初始化完成后的回调
+     */
+    function initJsBridge(readyCallback) {
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+        // 注册jsbridge
+        function connectWebViewJavascriptBridge(callback) {
+            if (isAndroid) {
+                if (window.WebViewJavascriptBridge) {
+                    callback(WebViewJavascriptBridge)
+                } else {
+                    document.addEventListener(
+                        'WebViewJavascriptBridgeReady'
+                        , function () {
+                            callback(WebViewJavascriptBridge)
+                        },
+                        false
+                    );
+                }
+                return;
+            }
+
+            if (isiOS) {
+                if (window.WebViewJavascriptBridge) {
+                    return callback(WebViewJavascriptBridge);
+                }
+                if (window.WVJBCallbacks) {
+                    return window.WVJBCallbacks.push(callback);
+                }
+                window.WVJBCallbacks = [callback];
+                var WVJBIframe = document.createElement('iframe');
+                WVJBIframe.style.display = 'none';
+                WVJBIframe.src = 'https://__bridge_loaded__';
+                document.documentElement.appendChild(WVJBIframe);
+                setTimeout(function () {
+                    document.documentElement.removeChild(WVJBIframe)
+                }, 0)
+            }
+        }
+
+        // 调用注册方法
+        connectWebViewJavascriptBridge(function (bridge) {
+            if (isAndroid) {
+                bridge.init(function (message, responseCallback) {
+                    console.log('JS got a message', message);
+                    responseCallback(data);
+                });
+            }
+            readyCallback();
+        });
+    }
+
+    /**
+     * 显示响应信息
+     * @param response 响应信心
+     */
+    function showResponse(response) {
+        $('#response').text(response);
+    }
+
+    /**
+     * jQuery
+     */
+    $(function () {
+        // 首先调用JSBridge初始化代码，完成后再设置其他
+        initJsBridge(function () {
+            $("#getOS").click(function () {
+                // 通过JsBridge调用原生方法，写法固定，第一个参数时方法名，第二个参数时传入参数，第三个参数时响应回调
+                window.WebViewJavascriptBridge.callHandler('getOS', null, function (response) {
+                    showResponse(response);
+                });
+            });
+
+            $('#login').click(function () {
+                // 通过JsBridge调用原生方法，写法固定，第一个参数时方法名，第二个参数时传入参数，第三个参数时响应回调
+                window.WebViewJavascriptBridge.callHandler('login', {
+                    "account": "18000000000",
+                    "password": "123456"
+                }, function (response) {
+                    showResponse(response);
+                });
+            });
+        })
+    });
+</script>
+</body>
+</html>

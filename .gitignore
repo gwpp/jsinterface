@@ -27,3 +27,5 @@ iOSInjectionProject/
 iOS/.idea
 iOS/Pods
 iOS/Podfile.lock
+
+Android/.idea

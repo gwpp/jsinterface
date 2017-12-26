@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ganwenpeng.jsbridge.MainActivity">
+
+    <TextView
+        android:background="#cccccc"
+        android:id="@+id/tv_bridge_webview"
+        android:gravity="center"
+        android:text="Bridge WebView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+</android.support.constraint.ConstraintLayout>
