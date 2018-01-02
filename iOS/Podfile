@@ -1,6 +1,6 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
 
-target 'JsBridge' do
+target 'JsInterface' do
     pod 'WebViewJavascriptBridge', '~> 6.0'
 end
