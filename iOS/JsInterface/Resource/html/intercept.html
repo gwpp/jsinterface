@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSBridge Test</title>
+    <title>拦截跳转实现通信</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.12.4/jquery.js"></script>
 
     <style type="text/css">
         .btn {
@@ -20,9 +21,21 @@
     </style>
 </head>
 <body>
-<p>以拦截跳转链接的方式实现时间</p>
-<a class="btn" href="app://login?account=13011112222&password=123456">发起APP登录</a>
+<p>以拦截跳转链接的方式实现</p>
+<btn class="btn" id="login">发起APP登录</btn>
 
-<a class="btn" href="app://share?title=分享的标题&desc=分享的描述">发起社交化分享</a>
+<btn class="btn" id="share">发起社交化分享</btn>
+
+<script>
+    $(function () {
+        $('#login').click(function () {
+            window.location = 'app://login?account=13011112222&password=123456';
+        });
+
+        $('#share').click(function () {
+            window.location = 'app://share?title=分享的标题&desc=分享的描述'
+        });
+    });
+</script>
 </body>
 </html>

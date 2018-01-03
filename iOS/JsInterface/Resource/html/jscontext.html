@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>拦截跳转实现通信</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.12.4/jquery.js"></script>
+
+    <style type="text/css">
+        .btn {
+            background-color: #aaa;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #444444;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        #response {
+            background: #eeeeee;
+            word-wrap: break-word;
+            display: block;
+            outline: 1px solid #ccc;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<p>以JSContext的方式实现</p>
+<btn class="btn" id="login">发起APP登录</btn>
+
+<btn class="btn" id="logout">发起APP登出</btn>
+
+<btn class="btn" id="getLoginUser">获取登录信息</btn>
+
+<pre id="response"></pre>
+<script>
+    /**
+     * 显示响应信息
+     * @param response 响应信心
+     */
+    function showResponse(response) {
+        $('#response').text(response);
+    }
+
+    $(function () {
+        $('#login').click(function () {
+            window.location = 'app://login?account=13011112222&password=123456';
+            app.login("13011112222", "123456");
+        });
+
+        $('#logout').click(function () {
+            app.logout();
+        });
+
+        $('#getLoginUser').click(function () {
+            var info = app.getLoginUser();
+            showResponse(JSON.stringify(info));
+        });
+    });
+</script>
+</body>
+</html>

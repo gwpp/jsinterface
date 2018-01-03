@@ -20,6 +20,7 @@
 		2B69BA7C1FFD2F91008C28A5 /* JSWKInterceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA7B1FFD2F91008C28A5 /* JSWKInterceptViewController.m */; };
 		2B69BA7F1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m */; };
 		2B69BA821FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA811FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m */; };
+		2B69BA851FFD34A4008C28A5 /* JSContextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA841FFD34A4008C28A5 /* JSContextModel.m */; };
 		2B89FA291FEAB1EC001349A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B89FA281FEAB1EC001349A7 /* AppDelegate.m */; };
 		2B89FA311FEAB1EC001349A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B89FA301FEAB1EC001349A7 /* Assets.xcassets */; };
 		2B89FA371FEAB1EC001349A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B89FA361FEAB1EC001349A7 /* main.m */; };
@@ -52,6 +53,8 @@
 		2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSWKBridgeCallAppViewController.m; sourceTree = "<group>"; };
 		2B69BA801FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSWKBridgeCallJSViewController.h; sourceTree = "<group>"; };
 		2B69BA811FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSWKBridgeCallJSViewController.m; sourceTree = "<group>"; };
+		2B69BA831FFD34A4008C28A5 /* JSContextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSContextModel.h; sourceTree = "<group>"; };
+		2B69BA841FFD34A4008C28A5 /* JSContextModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSContextModel.m; sourceTree = "<group>"; };
 		2B89FA241FEAB1EC001349A7 /* JsInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B89FA271FEAB1EC001349A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B89FA281FEAB1EC001349A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 			children = (
 				2B39E3601FF40251009238A1 /* JSHomeModel.h */,
 				2B39E3611FF40251009238A1 /* JSHomeModel.m */,
+				2B69BA831FFD34A4008C28A5 /* JSContextModel.h */,
+				2B69BA841FFD34A4008C28A5 /* JSContextModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				2B65FC6B1FFBE661000322A1 /* JSUIJsContextViewController.m in Sources */,
 				2B89FA3F1FEAB7FD001349A7 /* JSHomeViewController.m in Sources */,
 				2B89FA291FEAB1EC001349A7 /* AppDelegate.m in Sources */,
+				2B69BA851FFD34A4008C28A5 /* JSContextModel.m in Sources */,
 				2B69BA7C1FFD2F91008C28A5 /* JSWKInterceptViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

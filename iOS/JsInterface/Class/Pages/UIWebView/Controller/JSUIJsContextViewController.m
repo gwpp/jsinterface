@@ -7,31 +7,30 @@
 //
 
 #import "JSUIJsContextViewController.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "JSContextModel.h"
 
 @interface JSUIJsContextViewController ()
-
+@property(nonatomic, strong) JSContext *jsContext;
 @end
 
 @implementation JSUIJsContextViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // 加载测试用的HTML页面
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jscontext" ofType:@"html"]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UIWebViewDelegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *exception) {
+        context.exception = exception;
+        NSLog(@"异常信息：%@", exception);
+    };
+    self.jsContext[@"app"] = [[JSContextModel alloc] init];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
