@@ -7,14 +7,16 @@
 //
 
 #import "JSHomeViewController.h"
-#import "JSUIWebViewController.h"
-#import "JSWKWebViewController.h"
 #import "JSHomeModel.h"
 
 #import "JSUIInterceptViewController.h"
 #import "JSUIJsContextViewController.h"
 #import "JSUIBridgeCallAppViewController.h"
 #import "JSUIBridgeCallJSViewController.h"
+
+#import "JSWKInterceptViewController.h"
+#import "JSWKBridgeCallAppViewController.h"
+#import "JSWKBridgeCallJSViewController.h"
 
 @interface JSHomeViewController ()
 /**
@@ -39,14 +41,14 @@
 - (NSArray<NSArray<JSHomeModel *> *> *)modelArray {
     if (!_modelArray) {
         JSHomeModel *uiwebviewIntercept = [[JSHomeModel alloc] initWithTitle:@"JS调用APP方法 - 拦截跳转 - UIWebView" targetClass:[JSUIInterceptViewController class]];
-        JSHomeModel *wkwebviewIntercept = [[JSHomeModel alloc] initWithTitle:@"JS调用APP方法 - 拦截跳转 - WKWebView" targetClass:[JSWKWebViewController class]];
+        JSHomeModel *wkwebviewIntercept = [[JSHomeModel alloc] initWithTitle:@"JS调用APP方法 - 拦截跳转 - WKWebView" targetClass:[JSWKInterceptViewController class]];
 
         JSHomeModel *uiwebviewJsContext = [[JSHomeModel alloc] initWithTitle:@"JS调用APP方法 - JSContext - UIWebView" targetClass:[JSUIJsContextViewController class]];
 
-        JSHomeModel *wkJsbridgeCallApp = [[JSHomeModel alloc] initWithTitle:@"JS调用APP方法 - JsBridge - WKWebView" targetClass:[JSWKWebViewController class]];
+        JSHomeModel *wkJsbridgeCallApp = [[JSHomeModel alloc] initWithTitle:@"JS调用APP方法 - JsBridge - WKWebView" targetClass:[JSWKBridgeCallAppViewController class]];
         JSHomeModel *uiJsbridgeCallApp = [[JSHomeModel alloc] initWithTitle:@"JS调用APP方法 - JsBridge - UIWebView" targetClass:[JSUIBridgeCallAppViewController class]];
 
-        JSHomeModel *wkJsbridgeCallJS = [[JSHomeModel alloc] initWithTitle:@"APP调用JS方法 - JsBridge - WKWebView" targetClass:[JSWKWebViewController class]];
+        JSHomeModel *wkJsbridgeCallJS = [[JSHomeModel alloc] initWithTitle:@"APP调用JS方法 - JsBridge - WKWebView" targetClass:[JSWKBridgeCallJSViewController class]];
         JSHomeModel *uiJsbridgeCallJS = [[JSHomeModel alloc] initWithTitle:@"APP调用JS方法 - JsBridge - UIWebView" targetClass:[JSUIBridgeCallJSViewController class]];
 
         _modelArray = @[

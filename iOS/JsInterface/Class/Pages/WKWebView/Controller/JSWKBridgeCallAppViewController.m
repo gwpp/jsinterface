@@ -1,20 +1,20 @@
 //
-//  JSUIBridgeCallAppViewController.m
+//  JSWKBridgeCallAppViewController.m
 //  JsInterface
 //
 //  Created by 甘文鹏 on 2018/1/3.
 //  Copyright © 2018年 ganwenpeng.com. All rights reserved.
 //
 
-#import "JSUIBridgeCallAppViewController.h"
+#import "JSWKBridgeCallAppViewController.h"
+#import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
 #import "NSDictionary+Json.h"
 
-
-@interface JSUIBridgeCallAppViewController ()
+@interface JSWKBridgeCallAppViewController ()
 @property(nonatomic, strong) WebViewJavascriptBridge* bridge;
 @end
 
-@implementation JSUIBridgeCallAppViewController
+@implementation JSWKBridgeCallAppViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +27,10 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (void)setupJsBridge {
     if (self.bridge) return;
@@ -52,5 +56,4 @@
         responseCallback([response jsonString]);
     }];
 }
-
 @end

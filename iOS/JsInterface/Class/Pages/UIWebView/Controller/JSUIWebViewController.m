@@ -14,6 +14,7 @@
 @implementation JSUIWebViewController
 - (void)loadView {
     self.webView = [[UIWebView alloc] init];
+    self.webView.delegate = self;
     self.view = self.webView;
 }
 

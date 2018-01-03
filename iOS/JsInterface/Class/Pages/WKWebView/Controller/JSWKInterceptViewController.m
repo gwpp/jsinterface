@@ -1,31 +1,32 @@
 //
-//  JSUIInterceptViewController.m
+//  JSWKInterceptViewController.m
 //  JsInterface
 //
 //  Created by 甘文鹏 on 2018/1/3.
 //  Copyright © 2018年 ganwenpeng.com. All rights reserved.
 //
 
-#import "JSUIInterceptViewController.h"
+#import "JSWKInterceptViewController.h"
 #import "NSURL+Params.h"
 
-@interface JSUIInterceptViewController ()
+@interface JSWKInterceptViewController ()
 
 @end
 
-@implementation JSUIInterceptViewController
+@implementation JSWKInterceptViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // 加载测试用的HTML页面
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"intercept" ofType:@"html"]];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
-#pragma mark - UIWebViewDelegate
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+#pragma mark - WKNavigationDelegate
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
+    NSURLRequest *request = navigationAction.request;
     NSString *scheme = request.URL.scheme;
     NSString *host = request.URL.host;
     
@@ -48,12 +49,13 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"原生弹窗" message:msg delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
             [alert show];
         }
+        
         // ... 这里可以继续加
         
-        return NO;
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
     }
     
-    return YES;
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
-
 @end
