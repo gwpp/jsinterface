@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"UIWebView - JSContext";
+    
     // 加载测试用的HTML页面
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"jscontext" ofType:@"html"]];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
@@ -32,5 +34,6 @@
         NSLog(@"异常信息：%@", exception);
     };
     self.jsContext[@"app"] = [[JSContextModel alloc] init];
+//    [self.jsContext evaluateScript:<#(NSString *)#>]
 }
 @end

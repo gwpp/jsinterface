@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00A1806C621D3EB9E35C5C7A /* libPods-JsInterface.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8F24BA95BC4A8D4709671E /* libPods-JsInterface.a */; };
+		2B2A0043200875E500AC8FA8 /* JSHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2A0042200875E500AC8FA8 /* JSHomeTableViewCell.m */; };
+		2B2A0045200875F200AC8FA8 /* JSHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B2A0044200875F200AC8FA8 /* JSHomeTableViewCell.xib */; };
 		2B39E35E1FF40165009238A1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B39E35D1FF40165009238A1 /* Launch Screen.storyboard */; };
 		2B39E3621FF40251009238A1 /* JSHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B39E3611FF40251009238A1 /* JSHomeModel.m */; };
 		2B65FC5F1FFBDAA0000322A1 /* intercept.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B65FC5E1FFBDAA0000322A1 /* intercept.html */; };
@@ -32,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B2A0041200875E500AC8FA8 /* JSHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSHomeTableViewCell.h; sourceTree = "<group>"; };
+		2B2A0042200875E500AC8FA8 /* JSHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSHomeTableViewCell.m; sourceTree = "<group>"; };
+		2B2A0044200875F200AC8FA8 /* JSHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSHomeTableViewCell.xib; sourceTree = "<group>"; };
 		2B39E35D1FF40165009238A1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2B39E3601FF40251009238A1 /* JSHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSHomeModel.h; sourceTree = "<group>"; };
 		2B39E3611FF40251009238A1 /* JSHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSHomeModel.m; sourceTree = "<group>"; };
@@ -135,6 +140,9 @@
 		2B39E34F1FF3FEDB009238A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B2A0041200875E500AC8FA8 /* JSHomeTableViewCell.h */,
+				2B2A0042200875E500AC8FA8 /* JSHomeTableViewCell.m */,
+				2B2A0044200875F200AC8FA8 /* JSHomeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +367,7 @@
 				2B39E35E1FF40165009238A1 /* Launch Screen.storyboard in Resources */,
 				2B65FC5F1FFBDAA0000322A1 /* intercept.html in Resources */,
 				2B89FA481FEABCE6001349A7 /* jsbridge.html in Resources */,
+				2B2A0045200875F200AC8FA8 /* JSHomeTableViewCell.xib in Resources */,
 				2B65FC631FFBDAE9000322A1 /* jscontext.html in Resources */,
 				2B89FA311FEAB1EC001349A7 /* Assets.xcassets in Resources */,
 			);
@@ -426,6 +435,7 @@
 				2B89FA431FEAB826001349A7 /* JSUIWebViewController.m in Sources */,
 				2B65FC6E1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.m in Sources */,
 				2B65FC711FFBE736000322A1 /* JSUIBridgeCallJSViewController.m in Sources */,
+				2B2A0043200875E500AC8FA8 /* JSHomeTableViewCell.m in Sources */,
 				2B39E3621FF40251009238A1 /* JSHomeModel.m in Sources */,
 				2B89FA461FEAB833001349A7 /* JSWKWebViewController.m in Sources */,
 				2B69BA7F1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m in Sources */,

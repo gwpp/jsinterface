@@ -9,10 +9,13 @@
 #import "JSHomeModel.h"
 
 @implementation JSHomeModel
-- (instancetype)initWithTitle:(NSString *)title targetClass:(Class)targetClass {
+- (instancetype)initWithType:(NSString *)type jsCallNative:(NSString *)jsCallNative nativeCallJS:(NSString *)nativeCallJS targetClass:(Class)targetClass {
     JSHomeModel *homeModel = [[JSHomeModel alloc] init];
-    homeModel.title = title;
+    homeModel.webViewType = type;
+    homeModel.jsCallNative = jsCallNative;
+    homeModel.nativeCallJs = nativeCallJS;
     homeModel.targetClass = targetClass;
     return homeModel;
 }
+
 @end

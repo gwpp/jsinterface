@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"UIWebView - 拦截跳转";
 
     // 加载测试用的HTML页面
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"intercept" ofType:@"html"]];
@@ -52,7 +53,7 @@
         
         return NO;
     }
-    
+//    [webView stringByEvaluatingJavaScriptFromString:<#(nonnull NSString *)#>];
     return YES;
 }
 

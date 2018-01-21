@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"WKWebView - 拦截跳转";
+    
     // 加载测试用的HTML页面
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"intercept" ofType:@"html"]];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
@@ -55,7 +57,7 @@
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     }
-    
+//    [webView evaluateJavaScript:<#(nonnull NSString *)#> completionHandler:<#^(id _Nullable, NSError * _Nullable error)completionHandler#>]
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 @end

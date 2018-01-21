@@ -11,9 +11,17 @@
 
 @interface JSHomeModel : NSObject
 /**
- * 标题
+ * WebView的类型描述
  */
-@property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) NSString *webViewType;
+/**
+ * JS调用Native的方式
+ */
+@property(nonatomic, copy) NSString *jsCallNative;
+/**
+ * Native调用JS的方式
+ */
+@property(nonatomic, copy) NSString *nativeCallJs;
 
 /**
  * 点击后跳转的控制器的Class
@@ -21,10 +29,12 @@
 @property(nonatomic, copy) Class targetClass;
 
 /**
- * 构造方法，快速构建HomeModel
- * @param title 标题
- * @param targetClass 点击某一行后跳转的控制器的Class
- * @return 构造好的HomeModel
+ * 构造方法
+ * @param type WebView的类型
+ * @param jsCallNative JS调用Native的方式
+ * @param nativeCallJS Native调用JS的方式
+ * @param targetClass 点击后跳转的控制器
+ * @return 构造后的对象
  */
-- (instancetype)initWithTitle:(NSString *)title targetClass:(Class)targetClass;
+- (instancetype)initWithType:(NSString *)type jsCallNative:(NSString *)jsCallNative nativeCallJS:(NSString *)nativeCallJS targetClass:(Class)targetClass;
 @end

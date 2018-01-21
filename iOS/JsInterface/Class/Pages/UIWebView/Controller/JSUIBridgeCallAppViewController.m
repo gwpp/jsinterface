@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"UIWebView - JSBridge";
+    
     // 初始化jsbridge对象
     [self setupJsBridge];
     
