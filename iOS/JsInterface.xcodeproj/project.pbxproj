@@ -16,12 +16,10 @@
 		2B65FC631FFBDAE9000322A1 /* jscontext.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B65FC621FFBDAE9000322A1 /* jscontext.html */; };
 		2B65FC681FFBE624000322A1 /* JSUIInterceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65FC671FFBE624000322A1 /* JSUIInterceptViewController.m */; };
 		2B65FC6B1FFBE661000322A1 /* JSUIJsContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65FC6A1FFBE661000322A1 /* JSUIJsContextViewController.m */; };
-		2B65FC6E1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65FC6D1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.m */; };
-		2B65FC711FFBE736000322A1 /* JSUIBridgeCallJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65FC701FFBE736000322A1 /* JSUIBridgeCallJSViewController.m */; };
+		2B65FC6E1FFBE72D000322A1 /* JSUIBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65FC6D1FFBE72D000322A1 /* JSUIBridgeViewController.m */; };
 		2B65FC741FFBE840000322A1 /* NSURL+Params.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B65FC731FFBE840000322A1 /* NSURL+Params.m */; };
 		2B69BA7C1FFD2F91008C28A5 /* JSWKInterceptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA7B1FFD2F91008C28A5 /* JSWKInterceptViewController.m */; };
-		2B69BA7F1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m */; };
-		2B69BA821FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA811FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m */; };
+		2B69BA7F1FFD2FA6008C28A5 /* JSWKBridgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeViewController.m */; };
 		2B69BA851FFD34A4008C28A5 /* JSContextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B69BA841FFD34A4008C28A5 /* JSContextModel.m */; };
 		2B89FA291FEAB1EC001349A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B89FA281FEAB1EC001349A7 /* AppDelegate.m */; };
 		2B89FA311FEAB1EC001349A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B89FA301FEAB1EC001349A7 /* Assets.xcassets */; };
@@ -46,18 +44,14 @@
 		2B65FC671FFBE624000322A1 /* JSUIInterceptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSUIInterceptViewController.m; sourceTree = "<group>"; };
 		2B65FC691FFBE661000322A1 /* JSUIJsContextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSUIJsContextViewController.h; sourceTree = "<group>"; };
 		2B65FC6A1FFBE661000322A1 /* JSUIJsContextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSUIJsContextViewController.m; sourceTree = "<group>"; };
-		2B65FC6C1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSUIBridgeCallAppViewController.h; sourceTree = "<group>"; };
-		2B65FC6D1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSUIBridgeCallAppViewController.m; sourceTree = "<group>"; };
-		2B65FC6F1FFBE736000322A1 /* JSUIBridgeCallJSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSUIBridgeCallJSViewController.h; sourceTree = "<group>"; };
-		2B65FC701FFBE736000322A1 /* JSUIBridgeCallJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSUIBridgeCallJSViewController.m; sourceTree = "<group>"; };
+		2B65FC6C1FFBE72D000322A1 /* JSUIBridgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSUIBridgeViewController.h; sourceTree = "<group>"; };
+		2B65FC6D1FFBE72D000322A1 /* JSUIBridgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSUIBridgeViewController.m; sourceTree = "<group>"; };
 		2B65FC721FFBE840000322A1 /* NSURL+Params.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+Params.h"; sourceTree = "<group>"; };
 		2B65FC731FFBE840000322A1 /* NSURL+Params.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Params.m"; sourceTree = "<group>"; };
 		2B69BA7A1FFD2F91008C28A5 /* JSWKInterceptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSWKInterceptViewController.h; sourceTree = "<group>"; };
 		2B69BA7B1FFD2F91008C28A5 /* JSWKInterceptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSWKInterceptViewController.m; sourceTree = "<group>"; };
-		2B69BA7D1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSWKBridgeCallAppViewController.h; sourceTree = "<group>"; };
-		2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSWKBridgeCallAppViewController.m; sourceTree = "<group>"; };
-		2B69BA801FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSWKBridgeCallJSViewController.h; sourceTree = "<group>"; };
-		2B69BA811FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSWKBridgeCallJSViewController.m; sourceTree = "<group>"; };
+		2B69BA7D1FFD2FA6008C28A5 /* JSWKBridgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSWKBridgeViewController.h; sourceTree = "<group>"; };
+		2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSWKBridgeViewController.m; sourceTree = "<group>"; };
 		2B69BA831FFD34A4008C28A5 /* JSContextModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSContextModel.h; sourceTree = "<group>"; };
 		2B69BA841FFD34A4008C28A5 /* JSContextModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSContextModel.m; sourceTree = "<group>"; };
 		2B89FA241FEAB1EC001349A7 /* JsInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,10 +177,8 @@
 				2B89FA451FEAB833001349A7 /* JSWKWebViewController.m */,
 				2B69BA7A1FFD2F91008C28A5 /* JSWKInterceptViewController.h */,
 				2B69BA7B1FFD2F91008C28A5 /* JSWKInterceptViewController.m */,
-				2B69BA7D1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.h */,
-				2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m */,
-				2B69BA801FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.h */,
-				2B69BA811FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m */,
+				2B69BA7D1FFD2FA6008C28A5 /* JSWKBridgeViewController.h */,
+				2B69BA7E1FFD2FA6008C28A5 /* JSWKBridgeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,10 +208,8 @@
 				2B65FC671FFBE624000322A1 /* JSUIInterceptViewController.m */,
 				2B65FC691FFBE661000322A1 /* JSUIJsContextViewController.h */,
 				2B65FC6A1FFBE661000322A1 /* JSUIJsContextViewController.m */,
-				2B65FC6C1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.h */,
-				2B65FC6D1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.m */,
-				2B65FC6F1FFBE736000322A1 /* JSUIBridgeCallJSViewController.h */,
-				2B65FC701FFBE736000322A1 /* JSUIBridgeCallJSViewController.m */,
+				2B65FC6C1FFBE72D000322A1 /* JSUIBridgeViewController.h */,
+				2B65FC6D1FFBE72D000322A1 /* JSUIBridgeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -433,13 +423,11 @@
 			files = (
 				2B65FC681FFBE624000322A1 /* JSUIInterceptViewController.m in Sources */,
 				2B89FA431FEAB826001349A7 /* JSUIWebViewController.m in Sources */,
-				2B65FC6E1FFBE72D000322A1 /* JSUIBridgeCallAppViewController.m in Sources */,
-				2B65FC711FFBE736000322A1 /* JSUIBridgeCallJSViewController.m in Sources */,
+				2B65FC6E1FFBE72D000322A1 /* JSUIBridgeViewController.m in Sources */,
 				2B2A0043200875E500AC8FA8 /* JSHomeTableViewCell.m in Sources */,
 				2B39E3621FF40251009238A1 /* JSHomeModel.m in Sources */,
 				2B89FA461FEAB833001349A7 /* JSWKWebViewController.m in Sources */,
-				2B69BA7F1FFD2FA6008C28A5 /* JSWKBridgeCallAppViewController.m in Sources */,
-				2B69BA821FFD2FB3008C28A5 /* JSWKBridgeCallJSViewController.m in Sources */,
+				2B69BA7F1FFD2FA6008C28A5 /* JSWKBridgeViewController.m in Sources */,
 				2BEB86331FEC0D090015F8E0 /* NSDictionary+Json.m in Sources */,
 				2B89FA371FEAB1EC001349A7 /* main.m in Sources */,
 				2B65FC741FFBE840000322A1 /* NSURL+Params.m in Sources */,

@@ -24,6 +24,14 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
+- (void)btn1Click {
+    [self.webView stringByEvaluatingJavaScriptFromString:@"showResponse('点击了原生的按钮11111111111')"];
+}
+
+- (void)btn2Click {
+    [self.webView stringByEvaluatingJavaScriptFromString:@"showResponse('点击了原生的按钮2222222222')"];
+}
+
 #pragma mark - UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
@@ -49,11 +57,9 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"原生弹窗" message:msg delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
             [alert show];
         }
-        // ... 这里可以继续加
         
         return NO;
     }
-//    [webView stringByEvaluatingJavaScriptFromString:<#(nonnull NSString *)#>];
     return YES;
 }
 

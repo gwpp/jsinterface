@@ -1,5 +1,5 @@
 //
-//  JSWKBridgeCallAppViewController.h
+//  JSWKBridgeViewController.h
 //  JsInterface
 //
 //  Created by 甘文鹏 on 2018/1/3.
@@ -8,6 +8,6 @@
 
 #import "JSWKWebViewController.h"
 
-@interface JSWKBridgeCallAppViewController : JSWKWebViewController
+@interface JSWKBridgeViewController : JSWKWebViewController
 
 @end

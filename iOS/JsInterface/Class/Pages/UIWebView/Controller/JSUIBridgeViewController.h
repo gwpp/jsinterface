@@ -1,5 +1,5 @@
 //
-//  JSUIBridgeCallAppViewController.h
+//  JSUIBridgeViewController.h
 //  JsInterface
 //
 //  Created by 甘文鹏 on 2018/1/3.
@@ -8,6 +8,6 @@
 
 #import "JSUIWebViewController.h"
 
-@interface JSUIBridgeCallAppViewController : JSUIWebViewController
+@interface JSUIBridgeViewController : JSUIWebViewController
 
 @end

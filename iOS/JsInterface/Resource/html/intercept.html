@@ -18,15 +18,36 @@
             text-decoration: none;
             margin-top: 10px;
         }
+
+        #response {
+            background: #eeeeee;
+            word-wrap: break-word;
+            display: block;
+            outline: 1px solid #ccc;
+            padding: 5px;
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
+<p style="color: red">嵌入页区域</p>
 <p>以拦截跳转链接的方式实现</p>
 <button class="btn" id="login">发起APP登录</button>
 
 <button class="btn" id="share">发起社交化分享</button>
 
+<pre id="response"></pre>
 <script>
+
+    /**
+     * 显示响应信息
+     * @param response 响应信心
+     */
+    function showResponse(response) {
+        $('#response').text(response);
+        return response;
+    }
+
     $(function () {
         $('#login').click(function () {
             window.location = 'app://login?account=13011112222&password=123456';

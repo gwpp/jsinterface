@@ -1,20 +1,20 @@
 //
-//  JSWKBridgeCallAppViewController.m
+//  JSWKBridgeViewController.m
 //  JsInterface
 //
 //  Created by 甘文鹏 on 2018/1/3.
 //  Copyright © 2018年 ganwenpeng.com. All rights reserved.
 //
 
-#import "JSWKBridgeCallAppViewController.h"
+#import "JSWKBridgeViewController.h"
 #import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
 #import "NSDictionary+Json.h"
 
-@interface JSWKBridgeCallAppViewController ()
+@interface JSWKBridgeViewController ()
 @property(nonatomic, strong) WebViewJavascriptBridge* bridge;
 @end
 
-@implementation JSWKBridgeCallAppViewController
+@implementation JSWKBridgeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

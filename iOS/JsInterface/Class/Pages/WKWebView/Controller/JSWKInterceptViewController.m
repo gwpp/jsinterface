@@ -25,6 +25,20 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
+- (void)btn1Click {
+    [self.webView evaluateJavaScript:@"showResponse('点击了原生的按钮11111111111')" completionHandler:nil];
+}
+
+- (void)btn2Click {
+    [self.webView evaluateJavaScript:@"showResponse('点击了原生的按钮22222222222')" completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSLog(@"%@", response);
+        }
+    }];
+}
+
 #pragma mark - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
@@ -57,7 +71,6 @@
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     }
-//    [webView evaluateJavaScript:<#(nonnull NSString *)#> completionHandler:<#^(id _Nullable, NSError * _Nullable error)completionHandler#>]
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 @end

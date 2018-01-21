@@ -11,12 +11,11 @@
 
 #import "JSUIInterceptViewController.h"
 #import "JSUIJsContextViewController.h"
-#import "JSUIBridgeCallAppViewController.h"
-#import "JSUIBridgeCallJSViewController.h"
+#import "JSUIBridgeViewController.h"
 
 #import "JSWKInterceptViewController.h"
-#import "JSWKBridgeCallAppViewController.h"
-#import "JSWKBridgeCallJSViewController.h"
+#import "JSWKBridgeViewController.h"
+
 #import "JSHomeTableViewCell.h"
 
 @interface JSHomeViewController ()
@@ -47,13 +46,13 @@
 
         JSHomeModel *uiwebviewJsContext = [[JSHomeModel alloc] initWithType:@"UIWebView" jsCallNative:@"JsContextExport" nativeCallJS:@"evaluateScript: 或 callWithArguments:" targetClass:[JSUIJsContextViewController class]];
 
-        JSHomeModel *uiJsbridgeCallApp = [[JSHomeModel alloc] initWithType:@"UIWebView" jsCallNative:@"WebViewJavascriptBridge" nativeCallJS:@"callHandler" targetClass:[JSUIBridgeCallAppViewController class]];
-        JSHomeModel *wkJsbridgeCallApp = [[JSHomeModel alloc] initWithType:@"WKWebView" jsCallNative:@"WebViewJavascriptBridge" nativeCallJS:@"callHandler" targetClass:[JSWKBridgeCallAppViewController class]];
+        JSHomeModel *uiJsbridge = [[JSHomeModel alloc] initWithType:@"UIWebView" jsCallNative:@"WebViewJavascriptBridge" nativeCallJS:@"callHandler" targetClass:[JSUIBridgeViewController class]];
+        JSHomeModel *wkJsbridge = [[JSHomeModel alloc] initWithType:@"WKWebView" jsCallNative:@"WebViewJavascriptBridge" nativeCallJS:@"callHandler" targetClass:[JSWKBridgeViewController class]];
 
         _modelArray = @[
                 @[uiwebviewIntercept, wkwebviewIntercept],
                 @[uiwebviewJsContext],
-                @[uiJsbridgeCallApp, wkJsbridgeCallApp],
+                @[uiJsbridge, wkJsbridge],
         ];
     }
     return _modelArray;

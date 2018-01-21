@@ -1,20 +1,20 @@
 //
-//  JSUIBridgeCallAppViewController.m
+//  JSUIBridgeViewController.m
 //  JsInterface
 //
 //  Created by 甘文鹏 on 2018/1/3.
 //  Copyright © 2018年 ganwenpeng.com. All rights reserved.
 //
 
-#import "JSUIBridgeCallAppViewController.h"
+#import "JSUIBridgeViewController.h"
 #import "NSDictionary+Json.h"
 
 
-@interface JSUIBridgeCallAppViewController ()
+@interface JSUIBridgeViewController ()
 @property(nonatomic, strong) WebViewJavascriptBridge* bridge;
 @end
 
-@implementation JSUIBridgeCallAppViewController
+@implementation JSUIBridgeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

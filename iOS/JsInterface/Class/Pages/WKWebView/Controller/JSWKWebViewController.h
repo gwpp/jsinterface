@@ -11,4 +11,7 @@
 
 @interface JSWKWebViewController : UIViewController<WKNavigationDelegate>
 @property(nonatomic, strong) WKWebView *webView;
+
+- (void)btn1Click;
+- (void)btn2Click;
 @end

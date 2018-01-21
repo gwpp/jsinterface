@@ -11,4 +11,7 @@
 
 @interface JSUIWebViewController : UIViewController<UIWebViewDelegate>
 @property(nonatomic, strong) UIWebView *webView;
+
+- (void)btn1Click;
+- (void)btn2Click;
 @end
