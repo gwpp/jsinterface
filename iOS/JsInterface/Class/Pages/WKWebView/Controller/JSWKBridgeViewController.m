@@ -34,6 +34,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)btn1Click {
+    [self.bridge callHandler:@"jsbridge_showMessage" data:@"点击了原生的按钮111111111111" responseCallback:nil];
+}
+
+- (void)btn2Click {
+    [self.bridge callHandler:@"jsbridge_getJsMessage" data:@"点击了原生的按钮222222222" responseCallback:^(id responseData) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"显示jsbridge返回值" message:responseData delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+}
+
 - (void)setupJsBridge {
     if (self.bridge) return;
     

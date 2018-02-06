@@ -11,7 +11,12 @@
         .btn {
             background-color: #aaa;
             height: 40px;
-            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #444444;
+            text-decoration: none;
+            margin-top: 10px;
         }
 
         #response {
@@ -26,6 +31,7 @@
 </head>
 <body>
 <p style="color: red">嵌入页区域</p>
+<p>以JSBridge的方式实现</p>
 <button class="btn" id="getOS">获取当前操作系统</button>
 <button class="btn" id="login">发起登录</button>
 
@@ -84,6 +90,16 @@
                     responseCallback(data);
                 });
             }
+
+            bridge.registerHandler('jsbridge_showMessage', function (data, responseCallback) {
+                showResponse(data);
+            });
+
+            bridge.registerHandler('jsbridge_getJsMessage', function (data, responseCallback) {
+                showResponse(data);
+                responseCallback('native 传过来的是：' + data);
+            });
+
             readyCallback();
         });
     }

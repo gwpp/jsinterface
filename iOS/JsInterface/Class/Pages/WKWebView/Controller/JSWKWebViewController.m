@@ -76,10 +76,11 @@
 }
 
 - (void)btn1Click {
-    
 }
 
 - (void)btn2Click {
-    
+}
+
+- (void)btn3Click {
 }
 @end

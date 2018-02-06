@@ -76,10 +76,9 @@
 }
 
 - (void)btn1Click {
-    
 }
 
 - (void)btn2Click {
-    
 }
+
 @end
