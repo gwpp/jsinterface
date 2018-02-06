@@ -26,6 +26,15 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
+- (void)btn1Click {
+    [self.jsContext evaluateScript:@"showResponse('点击了按钮1111111111111111')"];
+}
+
+- (void)btn2Click {
+    JSValue *value = self.jsContext[@"showResponse"];
+    [value callWithArguments:@[@"点击了按钮222222222"]];
+}
+
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
