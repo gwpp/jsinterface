@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>拦截跳转实现通信</title>
+    <title>JSBridge Test</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -31,15 +31,13 @@
 </head>
 <body>
 <p style="color: red">嵌入页区域</p>
-<p>以JSContext的方式实现</p>
-<button class="btn" id="login">发起APP登录</button>
-
-<button class="btn" id="logout">发起APP登出</button>
-
-<button class="btn" id="getLoginUser">获取登录信息</button>
+<p>以webkit的方式实现</p>
+<button class="btn" id="login">执行登录操作</button>
+<button class="btn" id="logout">执行登出操作</button>
 
 <pre id="response"></pre>
-<script>
+
+<script type="text/javascript">
     /**
      * 显示响应信息
      * @param response 响应信心
@@ -48,18 +46,19 @@
         $('#response').text(response);
     }
 
+    /**
+     * jQuery
+     */
     $(function () {
-        $('#login').click(function () {
-            app.login("13011112222", "123456");
+        $("#login").click(function () {
+            window.webkit.messageHandlers.login.postMessage({
+                'account': '13000000000',
+                'password': '123456'
+            });
         });
 
         $('#logout').click(function () {
-            app.logout();
-        });
-
-        $('#getLoginUser').click(function () {
-            var info = app.getLoginUser();
-            showResponse(JSON.stringify(info));
+            window.webkit.messageHandlers.logout.postMessage(null);
         });
     });
 </script>

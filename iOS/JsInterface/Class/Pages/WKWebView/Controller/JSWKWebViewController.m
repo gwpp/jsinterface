@@ -66,8 +66,9 @@
     self.btn2 = btn2;
     
     self.view.backgroundColor = [UIColor blackColor];
-    self.webView = [[WKWebView alloc] init];
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:[[WKWebViewConfiguration alloc] init]];
     self.webView.navigationDelegate = self;
+    self.webView.UIDelegate = self;
     [self.view addSubview:self.webView];
     [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.equalTo(self.view);
@@ -81,6 +82,4 @@
 - (void)btn2Click {
 }
 
-- (void)btn3Click {
-}
 @end

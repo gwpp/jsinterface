@@ -15,6 +15,7 @@
 
 #import "JSWKInterceptViewController.h"
 #import "JSWKBridgeViewController.h"
+#import "JSWKWebKitViewController.h"
 
 #import "JSHomeTableViewCell.h"
 
@@ -45,6 +46,8 @@
         JSHomeModel *wkwebviewIntercept = [[JSHomeModel alloc] initWithType:@"WKWebView" jsCallNative:@"拦截跳转" nativeCallJS:@"evaluateJavaScript:completionHandler" targetClass:[JSWKInterceptViewController class]];
 
         JSHomeModel *uiwebviewJsContext = [[JSHomeModel alloc] initWithType:@"UIWebView" jsCallNative:@"JsContextExport" nativeCallJS:@"evaluateScript: 或 callWithArguments:" targetClass:[JSUIJsContextViewController class]];
+        
+        JSHomeModel *wkWebKit = [[JSHomeModel alloc] initWithType:@"WKWebView" jsCallNative:@"window.webkit.messageHandlers" nativeCallJS:@"evaluateJavaScript:completionHandler" targetClass:[JSWKWebKitViewController class]];
 
         JSHomeModel *uiJsbridge = [[JSHomeModel alloc] initWithType:@"UIWebView" jsCallNative:@"WebViewJavascriptBridge" nativeCallJS:@"callHandler" targetClass:[JSUIBridgeViewController class]];
         JSHomeModel *wkJsbridge = [[JSHomeModel alloc] initWithType:@"WKWebView" jsCallNative:@"WebViewJavascriptBridge" nativeCallJS:@"callHandler" targetClass:[JSWKBridgeViewController class]];
@@ -52,6 +55,7 @@
         _modelArray = @[
                 @[uiwebviewIntercept, wkwebviewIntercept],
                 @[uiwebviewJsContext],
+                @[wkWebKit],
                 @[uiJsbridge, wkJsbridge],
         ];
     }

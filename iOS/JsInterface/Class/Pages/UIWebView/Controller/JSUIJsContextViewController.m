@@ -43,6 +43,5 @@
         NSLog(@"异常信息：%@", exception);
     };
     self.jsContext[@"app"] = [[JSContextModel alloc] init];
-//    [self.jsContext evaluateScript:<#(NSString *)#>]
 }
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-@interface JSWKWebViewController : UIViewController<WKNavigationDelegate>
+@interface JSWKWebViewController : UIViewController<WKNavigationDelegate, WKUIDelegate>
 @property(nonatomic, strong) WKWebView *webView;
 
 - (void)btn1Click;
