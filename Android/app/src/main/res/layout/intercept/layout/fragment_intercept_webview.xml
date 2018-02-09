@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="com.ganwenpeng.jsinterface.page.home.HomeActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:text="原生区域"
+        android:gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:textColor="#FF0000"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/tv_btn1"
+            android:text="按钮1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:background="#AAAAAA"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/tv_btn2"
+            android:text="按钮2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:background="#AAAAAA"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <View
+        android:background="#AAAAAA"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <WebView
+        android:background="#FF0000"
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.ganwenpeng.jsbridge.bean;
+package com.ganwenpeng.jsinterface.model.bean;
 
 public class LoginBean {
     private String account;

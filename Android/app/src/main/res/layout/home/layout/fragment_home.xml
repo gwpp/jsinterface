@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ganwenpeng.jsbridge.MainActivity">
+    tools:context="com.ganwenpeng.jsinterface.page.home.HomeActivity">
 
-    <TextView
-        android:background="#cccccc"
-        android:id="@+id/tv_bridge_webview"
-        android:gravity="center"
-        android:text="Bridge WebView"
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_content"
+        android:layout_marginTop="44dp"
         android:layout_width="match_parent"
-        android:layout_height="60dp" />
+        android:layout_height="match_parent"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E5E5E5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/tv_jscallnative_title"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center|end"
+            android:text="Js call Native：" />
+
+        <TextView
+            android:id="@+id/tv_jscallnative_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/tv_jscallnative_title"
+            android:gravity="center|start"
+            tools:text="123" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/tv_nativecalljs_title"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center|end"
+            android:text="Native call Js：" />
+
+        <TextView
+            android:id="@+id/tv_nativecalljs_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/tv_nativecalljs_title"
+            android:gravity="center|start"
+            tools:text="123" />
+    </RelativeLayout>
+</LinearLayout>

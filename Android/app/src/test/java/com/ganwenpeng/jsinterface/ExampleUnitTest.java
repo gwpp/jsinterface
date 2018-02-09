@@ -1,4 +1,4 @@
-package com.ganwenpeng.jsbridge;
+package com.ganwenpeng.jsinterface;
 
 import org.junit.Test;
 

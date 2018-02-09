@@ -1,4 +1,4 @@
-package com.ganwenpeng.jsbridge;
+package com.ganwenpeng.jsinterface;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

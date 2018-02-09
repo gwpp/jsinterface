@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="16sp"
+        tools:text="标题" />
+
+    <ImageView
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:id="@+id/img_toolbar_back"
+        android:contentDescription="返回按钮"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/back" />
+
+
+</RelativeLayout>
