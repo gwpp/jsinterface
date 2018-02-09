@@ -37,7 +37,7 @@
 
         <!--JSBridge实现交互-->
         <activity
-            android:name="com.ganwenpeng.jsinterface.page.jsbridge.JsBridgeAvtivity"
+            android:name="com.ganwenpeng.jsinterface.page.jsbridge.JsBridgeActivity"
             android:screenOrientation="portrait" />
 
     </application>
