@@ -7,7 +7,6 @@ import com.ganwenpeng.jsinterface.page.base.BaseFragment;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class JsInterfaceLogic {
     private BaseFragment mFragment;
@@ -28,7 +27,7 @@ public class JsInterfaceLogic {
 
     @JavascriptInterface
     public String getLoginUser() {
-        return new JSONObject(new HashMap(4){{
+        return new JSONObject(new HashMap(4) {{
             put("user_id", 666);
             put("username", "你就说6不6");
             put("sex", "未知");

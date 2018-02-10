@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.ValueCallback;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -130,6 +131,11 @@ public class InterceptFragment extends BaseFragment<InterceptContract.Presenter>
 
     @Override
     public void execJavaScript(@NonNull String js) {
-        mWebView.evaluateJavascript("javascript:"+js, null);
+        mWebView.evaluateJavascript(js, new ValueCallback<String>() {
+            @Override
+            public void onReceiveValue(String s) {
+                showNativeMessage("调用JS方法后得到的返回值是：" + s);
+            }
+        });
     }
 }

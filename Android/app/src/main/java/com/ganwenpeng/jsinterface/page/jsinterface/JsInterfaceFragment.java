@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.ValueCallback;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -75,6 +76,11 @@ public class JsInterfaceFragment extends BaseFragment<JsInterfaceContract.Presen
 
     @Override
     public void execJavaScript(@NonNull String js) {
-        mWebView.evaluateJavascript(js, null);
+        mWebView.evaluateJavascript(js, new ValueCallback<String>() {
+            @Override
+            public void onReceiveValue(String s) {
+                showNativeMessage("调用JS方法后得到的返回值是：" + s);
+            }
+        });
     }
 }
